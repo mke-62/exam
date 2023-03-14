@@ -1,6 +1,8 @@
 import './App.css';
 import Home from './componets/home';
 import Logo from './img/logo.png'
+import Telephone from './img/telephone.png'
+
 
 const menu = [
     'ГЛАВНАЯ','О КОМПАНИИ','УСЛУГИ','КОНТАКТЫ'
@@ -20,7 +22,14 @@ function App() {
           </div>
         <header>
             <div className='headerLine'>
-                <a href="tel:+79605761557">+7(960) 57-615-57</a>
+
+                <a className='telLink' href="tel:+79605761557">
+                            <img className='telIcon' src={Telephone} alt="номер телефона"/>
+                        <p> +7(960) 57-615-57</p>
+
+
+
+                </a>
                 <div className='logo'>
                     <h5>Экологическое сопровождение вашего бизнеса
 
