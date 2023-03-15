@@ -1,7 +1,9 @@
 import './App.css';
 import Home from './componets/home';
+
 import Logo from './img/logo.png'
 import Telephone from './img/telephone.png'
+
 
 
 const menu = [
@@ -46,7 +48,10 @@ function App() {
         </header>
 
 
-        <Home />
+
+          <Home />
+
+
       </div>
 
   );

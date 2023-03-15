@@ -113,14 +113,15 @@ header{
 
 }
 
+
+
 .work{
   width: min-content;
   text-align: center;
   margin: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+   align-items: center;
 
 
 
@@ -168,13 +169,9 @@ header{
   z-index: auto;
   max-width: 100%;
   min-width: 100%;
-
   width: fit-content;
 
 
 
 }
 
-.about{
-  background-color: #fff8eb;
-}
