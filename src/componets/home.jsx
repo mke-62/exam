@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Form from './formic';
+import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 
 import Icon1 from '../img/icon1.png'
@@ -8,7 +9,6 @@ import Footerimg from '../img/background2.jpg'
 
 import YandexMap from './yandexmap'
 import Telephone from "../img/telephone.png";
-import Test from "./test";
 
 const AboutBack = styled.div`
   background-image: url(${Footerimg});
@@ -61,6 +61,22 @@ const Footer = styled.footer`
 
 `;
 
+const Address = styled.footer`
+  display: flex;
+  flex-direction: column;
+
+  background: white;
+  padding: 1em;
+  max-width: 250px;
+  position: absolute;
+  top: 40px; 
+  left: 40px;
+  opacity: 0.8;
+  border-radius: 20px;
+
+
+`;
+
 
 const IndexPage = () => (
     <>
@@ -70,62 +86,89 @@ const IndexPage = () => (
         <div className='homePage'>
 
             <div className='works'>
-                <div className='work'>
-                    <div>
-                        <img src={Icon1} alt="Логотип"/>
+                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                    <div className='work'>
+                        <div>
+                            <img src={Icon1} alt="Логотип"/>
+                        </div>
+                        Разработка и согласование проектной документации
                     </div>
-                    Разработка и согласование проектной документации
-                </div>
-                <div className='work'>
-                    <div>
-                        <img src={Icon1} alt="Логотип"/>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                    <div className='work'>
+                        <div>
+                            <img src={Icon1} alt="Логотип"/>
+                        </div>
+                        Экологическая отчетность
                     </div>
-                    Экологическая отчетность
-                </div>
-                <div className='work'>
-                    <div>
-                        <img src={Icon1} alt="Логотип"/>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                    <div className='work'>
+                        <div>
+                            <img src={Icon1} alt="Логотип"/>
+                        </div>
+                        Лабораторные исследования
                     </div>
-                    Лабораторные исследования
-                </div>
-                <div className='work'>
-                    <div>
-                        <img src={Icon1} alt="Логотип"/>
-                    </div>
+                </AnimationOnScroll>
+                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                    <div className='work'>
+                        <div>
+                            <img src={Icon1} alt="Логотип"/>
+                        </div>
 
-                    Учебный центр
-                </div>
+                        Учебный центр
+                    </div>
+                </AnimationOnScroll>
 
             </div>
-            <Test />
+
 
             <AboutBack className="about">
+
                 <About>
 
                     <AboutText>
-                        <h3>О компании</h3>
-                        <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
-                        <p><strong>Мы осуществляем экологическое сопровождение бизнеса
-                            и <span>проводим</span> обучение <u>специалистов</u><span>&nbsp;</span>по<span>&nbsp;</span><u>программам&nbsp;&nbsp;&laquo;Экологическая
-                                безопасность&raquo;.</u></strong></p>
-                        <p><strong> Наши преимущества: </strong></p>
-                        <ul>
-                            <li><strong>быстрая и&nbsp;квалифицированная помощь&nbsp;в решении вопросов, консультации по
-                                вопросам экологии и экологического законодательства</strong></li>
-                            <li><strong> </strong><strong>многолетний опыт работы в сфере экологии</strong></li>
-                            <li>
-                                <span><span><b>наличие квалифицированных и дипломированных специалистов</b></span></span>
-                            </li>
-                        </ul>
+                        <AnimationOnScroll animateIn='animate__zoomIn'>
+
+
+                            <h3>О компании</h3>
+                            <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
+                            <p><strong>Мы осуществляем экологическое сопровождение бизнеса
+                                и <span>проводим</span> обучение <u>специалистов</u><span>&nbsp;</span>по<span>&nbsp;</span><u>программам&nbsp;&nbsp;&laquo;Экологическая
+                                    безопасность&raquo;.</u></strong></p>
+                            <p><strong> Наши преимущества: </strong></p>
+                            <ul>
+                                <li><strong>быстрая и&nbsp;квалифицированная помощь&nbsp;в решении вопросов,
+                                    консультации по
+                                    вопросам экологии и экологического законодательства</strong></li>
+                                <li><strong> </strong><strong>многолетний опыт работы в сфере экологии</strong></li>
+                                <li>
+                                    <span><span><b>наличие квалифицированных и дипломированных специалистов</b></span></span>
+                                </li>
+                            </ul>
+                        </AnimationOnScroll>
                     </AboutText>
+
+
                     <AboutKont>
+                        <AnimationOnScroll animateIn='animate__zoomIn'>
 
-                        <Form/>
 
+                            <Form/>
+                        </AnimationOnScroll>
                     </AboutKont>
 
+
                 </About>
+
                 <AboutMap>
+                    <AnimationOnScroll animateIn='animate__fadeInLeftBig'>
+                        <Address>
+                            <p>Наш адрес:</p>
+                            <p> Рязань, Первомайский проспект, д. 7, оф. 15</p>
+
+                        </Address>
+                    </AnimationOnScroll>
 
                     <YandexMap/>
                 </AboutMap>
