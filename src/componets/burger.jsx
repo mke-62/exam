@@ -1,23 +1,22 @@
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import '../Sidebar.css';
+import {NavLink} from "react-router-dom";
 
 
-export default props => {
+
+export default   ({ menus, props }) => {
     return (
         <Menu>
-            <a className="menu-item" href="/">
-                Home
-            </a>
-            <a className="menu-item" href="/salads">
-                Salads
-            </a>
-            <a className="menu-item" href="/pizzas">
-                Pizzas
-            </a>
-            <a className="menu-item" href="/desserts">
-                Desserts
-            </a>
+            <ul>
+            {menus.map((menus) => (
+                <li>
+                        <NavLink as={NavLink} to={menus.links}>
+                            <a>{menus.name}</a>
+                        </NavLink>
+                 </li>
+            ))}
+                             </ul>
         </Menu>
     );
 };

@@ -22,6 +22,9 @@ const About = styled.div`
   background-color: #fff8eb;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  @media screen and  (max-width: 960px){
+    grid-template-columns:  1fr;
+  };
 
 `;
 
@@ -76,7 +79,54 @@ const Address = styled.footer`
 
 
 `;
+const Works = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-items: center;
 
+  @media screen and  (max-width: 960px){
+    grid-template-columns: 1fr 1fr;
+  };
+  @media screen and  (max-width: 640px){
+    grid-template-columns: 1fr;
+  };
+  
+`;
+
+const Work = styled.div`
+  width: min-content;
+  text-align: center;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+`;
+
+const WorkDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  border: 0.4em solid #84be19;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 0.4em rgba(222,222,222,0.75) inset;
+  margin: 1em;
+  max-width: 250px;
+`;
+
+const WorkImg = styled.img`
+  max-width: 150px;
+  min-width: 80px;
+  padding: 2em;
+  @media screen and  (max-width: 1170px) {
+    max-width: 120px;
+  };
+    @media screen and  (max-width: 1050px) {
+      max-width: 100px;
+    };
+      @media screen and  (max-width: 960px) {
+        max-width: 150px;
+      };
+`;
 
 const IndexPage = () => (
     <>
@@ -85,45 +135,45 @@ const IndexPage = () => (
         </div>
         <div className='homePage'>
 
-            <div className='works'>
+            <Works>
                 <AnimationOnScroll animateIn='animate__fadeInUp'>
-                    <div className='work'>
-                        <div>
-                            <img src={Icon1} alt="Логотип"/>
-                        </div>
+                    <Work>
+                        <WorkDiv>
+                            <WorkImg src={Icon1} alt="Логотип"/>
+                        </WorkDiv>
                         Разработка и согласование проектной документации
-                    </div>
+                    </Work>
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn='animate__fadeInUp'>
-                    <div className='work'>
-                        <div>
-                            <img src={Icon1} alt="Логотип"/>
-                        </div>
+                    <Work>
+                        <WorkDiv>
+                            <WorkImg src={Icon1} alt="Логотип"/>
+                        </WorkDiv>
                         Экологическая отчетность
-                    </div>
+                    </Work>
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn='animate__fadeInUp'>
-                    <div className='work'>
-                        <div>
-                            <img src={Icon1} alt="Логотип"/>
-                        </div>
+                    <Work>
+                        <WorkDiv>
+                            <WorkImg src={Icon1} alt="Логотип"/>
+                        </WorkDiv>
                         Лабораторные исследования
-                    </div>
+                    </Work>
                 </AnimationOnScroll>
                 <AnimationOnScroll animateIn='animate__fadeInUp'>
-                    <div className='work'>
-                        <div>
-                            <img src={Icon1} alt="Логотип"/>
-                        </div>
+                    <Work>
+                        <WorkDiv>
+                            <WorkImg src={Icon1} alt="Логотип"/>
+                        </WorkDiv>
 
                         Учебный центр
-                    </div>
+                    </Work>
                 </AnimationOnScroll>
 
-            </div>
+            </Works>
 
 
-            <AboutBack className="about">
+            <AboutBack>
 
                 <About>
 
