@@ -12,9 +12,6 @@ import Telephone from './img/telephone.png'
 import styled from "styled-components";
 
 
-
-
-
 const HeaderLine = styled.div`
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -44,54 +41,83 @@ const Logos = styled.div`
 const LogosImg = styled.img`
   width: 19em;
 `;
+const BurgerStyle  = styled.div`
+  overflow: hidden;
+  @media screen and  (min-width: 960px){
+    display: none;
+  };
+`;
+const MenuStyle  = styled.div`
+  background-image: url('./img/vol.png') ;
+  background-position-x: left ;
+  background-position-y: bottom;
+  background-size: 86px;
+  background-repeat-x: repeat;
+  background-repeat-y: no-repeat;
+  @media screen and  (max-width: 960px){
+    display: none;
+  };
+`;
+const MenuStyleUl  = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin-top: 0;
+  padding-bottom: 2em;
+  padding-top: 2em;
+`;
 
 
 const Layout = ({ QQQ })=> {
 
     const menus = [
         {
-            name: 'ГЛАВНАЯ',
+            name: 'Главная',
             links: '/'
 
         },
         {
-            name: 'О КОМПАНИИ',
-            links: '/еkologicheskoe-soprovozhdenie'
+            name: 'Проектная документация',
+            links: '/development'
 
         },
+
         {
-            name: 'УСЛУГИ',
-            name2 : {
-                name: 'О КОМПАНИИ',
-                links: '/еkologicheskoe-soprovozhdenie'
-            },
+            name: 'Экологическая отчетность',
+            links: 'reporting'
         },
         {
-            name: 'КОНТАКТЫ',
-            links: 'EkoSopr'
+            name: ' Дополнительные услуги',
+            links: 'additionall'
+        },
+        {
+            name: ' Учебный центр',
+            links: 'training'
+        },
+        {
+            name: 'Контакты',
+            links: 'contacts'
         }
     ];
 
-    console.log(menus);
     return (
         <>
-            <Burger pageWrapId={'page-wrap'} outerContainerId={'outer-container'} menus={menus}/>
+            <BurgerStyle>
+                <Burger pageWrapId={'page-wrap'} outerContainerId={'outer-container'} menus={menus}/>
+            </BurgerStyle>
             <div className='main'>
-                <div className='menu'>
-                    <ul>
+                <MenuStyle>
+                    <MenuStyleUl>
                         {menus.map((menus) => (
-                            <li>
-                                <ins>
+                            <li key={menus.id}>
                                 <NavLink as={NavLink} to={menus.links}>
                                     {menus.name}
                                 </NavLink>
-                                </ins>
-                                {/*<ins>{menu}</ins>*/}
                             </li>
                         ))}
-                    </ul>
+                    </MenuStyleUl>
 
-                </div>
+                </MenuStyle>
 
 
                 <AnimateContainer.fadeInDown>

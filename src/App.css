@@ -5,24 +5,6 @@
 
 }
 
-.menu {
-  background-image: url('./img/vol.png') ;
-  background-position-x: left ;
-  background-position-y: bottom;
-  background-size: 86px;
-  background-repeat-x: repeat;
-  background-repeat-y: no-repeat;
-
-
-}
-.menu ul {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-  margin-top: 0;
-  padding-bottom: 2em;
-  padding-top: 2em;
-}
 header{
   background-image: url('./img/lineLogo.png') ;
   background-position-x:  50%;
@@ -87,7 +69,13 @@ header{
   min-width: 100%;
   width: fit-content;
 
+}
+a {
+  color: green;
+  text-decoration:none;
+}
 
-
+a:hover {
+  color: black;
 }
 

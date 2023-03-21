@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 import Form from '../componets/formic';
 import {AnimationOnScroll} from 'react-animation-on-scroll';
+import {AnimateContainer} from 'react-animate-container';
+
+
 
 
 import Icon1 from '../img/icon1.png'
@@ -8,6 +11,8 @@ import Headerimg from '../img/background.jpg'
 import Footerimg from '../img/background2.jpg'
 
 import YandexMap from '../componets/yandexmap'
+import {NavLink} from "react-router-dom";
+import React from "react";
 
 const AboutBack = styled.div`
   background-image: url(${Footerimg});
@@ -121,31 +126,48 @@ const IndexPage = () => (
         <div className='homePage'>
 
             <Works>
-                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                <AnimateContainer.fadeInDown>
+                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+
+                    <NavLink as={NavLink} to={"/development"}>
                     <Work>
                         <WorkDiv>
                             <WorkImg src={Icon1} alt="Логотип"/>
                         </WorkDiv>
                         Разработка и согласование проектной документации
                     </Work>
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__fadeInUp'>
+
+                    </NavLink>
+                {/*</AnimationOnScroll>*/}
+                    </AnimateContainer.fadeInDown>
+                <AnimateContainer.fadeInDown>
+                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+                    <NavLink as={NavLink} to={"/reporting"}>
+
                     <Work>
                         <WorkDiv>
                             <WorkImg src={Icon1} alt="Логотип"/>
                         </WorkDiv>
                         Экологическая отчетность
                     </Work>
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                    </NavLink>
+                {/*</AnimationOnScroll>*/}
+                    </AnimateContainer.fadeInDown>
+                <AnimateContainer.fadeInDown>
+                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+                    <NavLink as={NavLink} to={"/additionall"}>
                     <Work>
                         <WorkDiv>
                             <WorkImg src={Icon1} alt="Логотип"/>
                         </WorkDiv>
-                        Лабораторные исследования
+                        Дополнительные услуги
                     </Work>
-                </AnimationOnScroll>
-                <AnimationOnScroll animateIn='animate__fadeInUp'>
+                    </NavLink>
+                {/*</AnimationOnScroll>*/}
+                    </AnimateContainer.fadeInDown>
+                <AnimateContainer.fadeInDown>
+                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+                    <NavLink as={NavLink} to={"/training"}>
                     <Work>
                         <WorkDiv>
                             <WorkImg src={Icon1} alt="Логотип"/>
@@ -153,7 +175,9 @@ const IndexPage = () => (
 
                         Учебный центр
                     </Work>
-                </AnimationOnScroll>
+                    </NavLink>
+                {/*</AnimationOnScroll>*/}
+                    </AnimateContainer.fadeInDown>
 
             </Works>
 
@@ -164,21 +188,20 @@ const IndexPage = () => (
 
                     <AboutText>
                         <AnimationOnScroll animateIn='animate__zoomIn'>
-
-
+                            
                             <h3>О компании</h3>
                             <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
-                            <p><strong>Мы осуществляем экологическое сопровождение бизнеса
-                                и <span>проводим</span> обучение <u>специалистов</u><span>&nbsp;</span>по<span>&nbsp;</span><u>программам&nbsp;&nbsp;&laquo;Экологическая
-                                    безопасность&raquo;.</u></strong></p>
-                            <p><strong> Наши преимущества: </strong></p>
+                            <p> <b>Мы осуществляем экологическое сопровождение бизнеса
+                                и  проводим  обучение <u>специалистов</u>   по   <u>программам Экологическая
+                                    безопасность&raquo;.</u> </b></p>
+                            <p>  <b>Наши преимущества:</b>  </p>
                             <ul>
-                                <li><strong>быстрая и&nbsp;квалифицированная помощь&nbsp;в решении вопросов,
+                                <li> <b>быстрая и&nbsp;квалифицированная помощь&nbsp;в решении вопросов,
                                     консультации по
-                                    вопросам экологии и экологического законодательства</strong></li>
-                                <li><strong> </strong><strong>многолетний опыт работы в сфере экологии</strong></li>
+                                    вопросам экологии и экологического законодательства</b> </li>
+                                <li> <b>многолетний опыт работы в сфере экологии </b></li>
                                 <li>
-                                    <span><span><b>наличие квалифицированных и дипломированных специалистов</b></span></span>
+                                    <b>наличие квалифицированных и дипломированных специалистов</b>
                                 </li>
                             </ul>
                         </AnimationOnScroll>
