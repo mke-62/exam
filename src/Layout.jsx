@@ -1,7 +1,7 @@
 import './App.css';
-import Home from './componets/home';
+import Footer from './componets/footer';
 import {AnimateContainer} from 'react-animate-container';
- import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 
 
@@ -123,6 +123,8 @@ const Layout = ({ QQQ })=> {
                 </AnimateContainer.fadeInDown>
 
                 <Outlet />
+
+                <Footer />
 
 
 

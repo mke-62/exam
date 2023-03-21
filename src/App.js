@@ -2,9 +2,9 @@ import './App.css';
 import Layout from "./Layout";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import IndexPage from "./componets/home";
+import IndexPage from "./pages/home";
 
-import EkoSopr from "./pages/еkologicheskoe-soprovozhdenie";
+import EkoSopr from "./pages/development";
 
 
 export default function App() {
@@ -14,7 +14,7 @@ export default function App() {
                 <Routes>
                     <Route element={<Layout />}>
                         <Route path="/" element={<IndexPage />} />
-                        <Route path="/еkologicheskoe-soprovozhdenie" element={<EkoSopr />} />
+                        <Route path="/development" element={<EkoSopr />} />
                         <Route path="/heroes">
                             <Route index element={<EkoSopr />} />
                             <Route path=":id" element={<EkoSopr />} />

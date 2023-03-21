@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Form from './formic';
+import Form from '../componets/formic';
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 
 
@@ -7,8 +7,7 @@ import Icon1 from '../img/icon1.png'
 import Headerimg from '../img/background.jpg'
 import Footerimg from '../img/background2.jpg'
 
-import YandexMap from './yandexmap'
-import Telephone from "../img/telephone.png";
+import YandexMap from '../componets/yandexmap'
 
 const AboutBack = styled.div`
   background-image: url(${Footerimg});
@@ -48,21 +47,7 @@ const AboutMap = styled.div`
   padding: 2em;
 
 `;
-const Backgroundwhite = styled.footer`
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
-const Footer = styled.footer`
-  display: grid;
-  grid-gap: 1px;
-  background: gray;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 2em;
-
-`;
 
 const Address = styled.footer`
   display: flex;
@@ -225,28 +210,7 @@ const IndexPage = () => (
 
             </AboutBack>
 
-            <Footer>
 
-                <Backgroundwhite>
-                    Copyright © 2023
-                    ООО "Экопрофи"
-                </Backgroundwhite>
-                <Backgroundwhite>
-
-                    <a href="mailto:info@ekoprofi62.ru">info@ekoprofi62.ru</a>
-
-
-                </Backgroundwhite>
-
-                <Backgroundwhite>
-                    <a className='telLink' href="tel:+79605761557">
-                        <img className='telIcon' src={Telephone} alt="номер телефона"/>
-                        <p> +7(960) 57-615-57</p></a>
-                </Backgroundwhite>
-
-
-            </Footer>
-            <hr/>
 
 
         </div>
