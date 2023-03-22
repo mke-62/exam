@@ -5,23 +5,20 @@
 
 }
 
-header{
+.hedd{
   background-image: url('./img/lineLogo.png') ;
   background-position-x:  50%;
   background-position-y: bottom  ;
   background-size: auto;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
+  background-repeat: no-repeat;
+
   background-attachment: initial;
   background-origin: initial;
   background-clip: initial;
   background-color: initial;
-  position: relative;
   z-index: 1;
-
+  position: relative;
 }
-
-
 
 
 .logo img {
@@ -31,11 +28,16 @@ header{
    background-image: url('./img/lineLogodown.png') ;
   background-position-x:  50%;
   background-size: auto;
-  background-repeat-x: no-repeat;
-  background-repeat-y: no-repeat;
-  position: relative;
+  background-repeat: no-repeat;
+
+  background-attachment: initial;
+  background-origin: initial;
+  background-clip: initial;
+  background-color: initial;
   z-index: 1;
   padding-top: 5em;
+  max-width: 100%;
+  position: relative;
  }
 
 
@@ -67,7 +69,9 @@ header{
   z-index: auto;
   max-width: 100%;
   min-width: 100%;
+  min-height: 300px;
   width: fit-content;
+  object-fit: cover;
 
 }
 a {

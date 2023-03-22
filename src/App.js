@@ -1,5 +1,7 @@
 import './App.css';
 import Layout from "./Layout";
+import "animate.css/animate.min.css";
+
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/home";

@@ -1,7 +1,8 @@
 import './App.css';
 import Footer from './componets/footer';
-import {AnimateContainer} from 'react-animate-container';
-import { Outlet, NavLink } from "react-router-dom";
+ import { Outlet, NavLink } from "react-router-dom";
+ import { FadeIn} from "react-slide-fade-in";
+
 
 
 
@@ -9,6 +10,7 @@ import Burger from './componets/burger';
 
 import Logo from './img/logo.png'
 import Telephone from './img/telephone.png'
+import menuBeg from './img/vol.png'
 import styled from "styled-components";
 
 
@@ -48,7 +50,7 @@ const BurgerStyle  = styled.div`
   };
 `;
 const MenuStyle  = styled.div`
-  background-image: url('./img/vol.png') ;
+  background-image: url(${menuBeg}) ;
   background-position-x: left ;
   background-position-y: bottom;
   background-size: 86px;
@@ -73,30 +75,34 @@ const Layout = ({ QQQ })=> {
     const menus = [
         {
             name: 'Главная',
-            links: '/'
-
+            links: '/',
+            id: 1,
         },
         {
             name: 'Проектная документация',
-            links: '/development'
-
+            links: '/development',
+            id: 2,
         },
 
         {
             name: 'Экологическая отчетность',
-            links: 'reporting'
+            links: 'reporting',
+            id: 3,
         },
         {
             name: ' Дополнительные услуги',
-            links: 'additionall'
+            links: 'additionall',
+            id: 4,
         },
         {
             name: ' Учебный центр',
-            links: 'training'
+            links: 'training',
+            id: 5,
         },
         {
             name: 'Контакты',
-            links: 'contacts'
+            links: 'contacts',
+            id: 6,
         }
     ];
 
@@ -120,8 +126,13 @@ const Layout = ({ QQQ })=> {
                 </MenuStyle>
 
 
-                <AnimateContainer.fadeInDown>
-                    <header>
+                <FadeIn
+                    from="top"
+                    positionOffset={400}
+                    triggerOffset={400}
+                    delayInMilliseconds={200}
+                >
+                    <div className='hedd'>
 
                         <HeaderLine>
 
@@ -145,8 +156,8 @@ const Layout = ({ QQQ })=> {
                         </HeaderLine>
 
 
-                    </header>
-                </AnimateContainer.fadeInDown>
+                    </div>
+                    </FadeIn>
 
                 <Outlet />
 

@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import Form from '../componets/formic';
 import {AnimationOnScroll} from 'react-animation-on-scroll';
-import {AnimateContainer} from 'react-animate-container';
-
-
+import { FadeIn} from "react-slide-fade-in";
 
 
 import Icon1 from '../img/icon1.png'
@@ -126,8 +124,13 @@ const IndexPage = () => (
         <div className='homePage'>
 
             <Works>
-                <AnimateContainer.fadeInDown>
-                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+
+                <FadeIn
+                    from="bottom"
+                    positionOffset={400}
+                    triggerOffset={400}
+                    delayInMilliseconds={200}
+                >
 
                     <NavLink as={NavLink} to={"/development"}>
                     <Work>
@@ -138,10 +141,14 @@ const IndexPage = () => (
                     </Work>
 
                     </NavLink>
-                {/*</AnimationOnScroll>*/}
-                    </AnimateContainer.fadeInDown>
-                <AnimateContainer.fadeInDown>
-                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+                </FadeIn>
+
+                <FadeIn
+                    from="bottom"
+                    positionOffset={400}
+                    triggerOffset={400}
+                    delayInMilliseconds={200}
+                >
                     <NavLink as={NavLink} to={"/reporting"}>
 
                     <Work>
@@ -151,10 +158,14 @@ const IndexPage = () => (
                         Экологическая отчетность
                     </Work>
                     </NavLink>
-                {/*</AnimationOnScroll>*/}
-                    </AnimateContainer.fadeInDown>
-                <AnimateContainer.fadeInDown>
-                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+                </FadeIn>
+
+                <FadeIn
+                    from="bottom"
+                    positionOffset={400}
+                    triggerOffset={400}
+                    delayInMilliseconds={200}
+                >
                     <NavLink as={NavLink} to={"/additionall"}>
                     <Work>
                         <WorkDiv>
@@ -163,10 +174,13 @@ const IndexPage = () => (
                         Дополнительные услуги
                     </Work>
                     </NavLink>
-                {/*</AnimationOnScroll>*/}
-                    </AnimateContainer.fadeInDown>
-                <AnimateContainer.fadeInDown>
-                {/*<AnimationOnScroll animateIn='animate__fadeInUp'>*/}
+                </FadeIn>
+                <FadeIn
+                    from="bottom"
+                    positionOffset={400}
+                    triggerOffset={400}
+                    delayInMilliseconds={200}
+                >
                     <NavLink as={NavLink} to={"/training"}>
                     <Work>
                         <WorkDiv>
@@ -176,8 +190,8 @@ const IndexPage = () => (
                         Учебный центр
                     </Work>
                     </NavLink>
-                {/*</AnimationOnScroll>*/}
-                    </AnimateContainer.fadeInDown>
+                </FadeIn>
+
 
             </Works>
 
@@ -187,7 +201,7 @@ const IndexPage = () => (
                 <About>
 
                     <AboutText>
-                        <AnimationOnScroll animateIn='animate__zoomIn'>
+                        <AnimationOnScroll  offset={100} animateIn='animate__zoomIn'>
                             
                             <h3>О компании</h3>
                             <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
@@ -209,7 +223,7 @@ const IndexPage = () => (
 
 
                     <AboutKont>
-                        <AnimationOnScroll animateIn='animate__zoomIn'>
+                        <AnimationOnScroll offset={100} animateIn='animate__zoomIn'>
 
 
                             <Form/>
