@@ -8,6 +8,7 @@ import Footer from './componets/footer';
 
 import Burger from './componets/burger';
 
+
 import Logo from './img/logo.png'
 import Telephone from './img/telephone.png'
 import menuBeg from './img/vol.png'
@@ -109,7 +110,7 @@ const Layout = ({ QQQ })=> {
     return (
         <>
             <BurgerStyle>
-                <Burger pageWrapId={'page-wrap'} outerContainerId={'outer-container'} menus={menus}/>
+                <Burger pageWrapId={'page-wrap'} outerContainerId={'outer-container'} items={menus}/>
             </BurgerStyle>
             <div className='main'>
                 <MenuStyle>

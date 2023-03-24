@@ -4,9 +4,15 @@ import {AnimationOnScroll} from 'react-animation-on-scroll';
 import { FadeIn} from "react-slide-fade-in";
 
 
+
 import Icon1 from '../img/icon1.png'
+import Icon2 from '../img/icon2.png'
+import Icon3 from '../img/icon3.png'
+import Icon4 from '../img/icon4.png'
 import Headerimg from '../img/background.jpg'
 import Footerimg from '../img/background2.jpg'
+
+import ContMassage from '../componets/contmassage'
 
 import YandexMap from '../componets/yandexmap'
 import {NavLink} from "react-router-dom";
@@ -64,6 +70,10 @@ const Address = styled.footer`
   left: 40px;
   opacity: 0.8;
   border-radius: 20px;
+  @media screen and  (max-width: 640px){
+    position: static;
+    max-width: 650px;
+  };
 
 
 `;
@@ -116,6 +126,7 @@ const WorkImg = styled.img`
       };
 `;
 
+
 const IndexPage = () => (
     <>
         <div className='headerBack'>
@@ -153,7 +164,7 @@ const IndexPage = () => (
 
                     <Work>
                         <WorkDiv>
-                            <WorkImg src={Icon1} alt="Логотип"/>
+                            <WorkImg src={Icon2} alt="Логотип"/>
                         </WorkDiv>
                         Экологическая отчетность
                     </Work>
@@ -169,7 +180,7 @@ const IndexPage = () => (
                     <NavLink as={NavLink} to={"/additionall"}>
                     <Work>
                         <WorkDiv>
-                            <WorkImg src={Icon1} alt="Логотип"/>
+                            <WorkImg src={Icon3} alt="Логотип"/>
                         </WorkDiv>
                         Дополнительные услуги
                     </Work>
@@ -184,7 +195,7 @@ const IndexPage = () => (
                     <NavLink as={NavLink} to={"/training"}>
                     <Work>
                         <WorkDiv>
-                            <WorkImg src={Icon1} alt="Логотип"/>
+                            <WorkImg src={Icon4} alt="Логотип"/>
                         </WorkDiv>
 
                         Учебный центр
@@ -202,8 +213,7 @@ const IndexPage = () => (
 
                     <AboutText>
                         <AnimationOnScroll  offset={100} animateIn='animate__zoomIn'>
-                            
-                            <h3>О компании</h3>
+                              <h3>О компании</h3>
                             <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
                             <p> <b>Мы осуществляем экологическое сопровождение бизнеса
                                 и  проводим  обучение <u>специалистов</u>   по   <u>программам Экологическая
@@ -227,6 +237,7 @@ const IndexPage = () => (
 
 
                             <Form/>
+                            <ContMassage/>
                         </AnimationOnScroll>
                     </AboutKont>
 

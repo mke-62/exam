@@ -15,18 +15,53 @@ const OlStyle = styled.ol`
 `;
 
 
-export default ({menus}) => {
-    return (
-        <Menu>
-            <OlStyle>
-                {menus.map((menus) => (
-                    <LiStyle key={menus.id}>
-                        <NavLink as={NavLink} to={menus.links}>
-                            <a>{menus.name}</a>
-                        </NavLink>
-                    </LiStyle>
-                ))}
-            </OlStyle>
-        </Menu>
-    );
-};
+
+class ParentComponent extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            menuOpen: false
+        }
+    }
+
+
+    handleStateChange (state) {
+        this.setState({menuOpen: state.isOpen})
+    }
+
+
+    closeMenu () {
+        this.setState({menuOpen: false})
+    }
+
+
+    toggleMenu () {
+        this.setState(state => ({menuOpen: !state.menuOpen}))
+    }
+
+    render () {
+        return (
+            <div>
+                <Menu
+                    isOpen={this.state.menuOpen}
+                    onStateChange={(state) => this.handleStateChange(state)}
+                >
+                    <OlStyle>
+                        {this.props.items.map((menus) => (
+                            <LiStyle key={menus.id}>
+                                <NavLink as={NavLink} to={menus.links}>
+                                    <p onClick={() => this.closeMenu()}>{menus.name}</p>
+                                </NavLink>
+                            </LiStyle>
+                        ))}
+                    </OlStyle>
+
+                </Menu>
+
+            </div>
+        )
+    }
+}
+export default ParentComponent;
+
+

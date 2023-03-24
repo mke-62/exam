@@ -13,6 +13,13 @@ const Footer = styled.footer`
   background: gray;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 2em;
+  @media screen and  (max-width: 640px){
+    display: flex;
+    flex-direction: column-reverse;
+    background: white;
+    gap: 1em;
+     
+  };
 
 `;
 

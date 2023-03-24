@@ -54,7 +54,7 @@ const SignupForm = () => {
     });
     return (
         <>
-        <h1>Отправить заявку</h1>
+        <h2>Оставьте заявку или свяжитесь с нами через мессенджеры!</h2>
         <FormStyle onSubmit={formik.handleSubmit}>
             <label htmlFor="firstName">Имя</label>
             <InputStyle
