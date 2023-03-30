@@ -1,18 +1,26 @@
 // import styled from "styled-components";
 
-// const LiStyle = styled.li`
-//   padding: 0.5em;
-//   text-align: left;
-// `;
-// const OlStyle = styled.ol`
-//   display: flex;
-//   flex-direction: column;
-//   list-style-type: none;
-// `;
 
+import styled from "styled-components";
+
+const MarginStyle = styled.div`
+  margin-right: 2em;
+  margin-left: 2em;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  `;
+const MainStyle = styled.main`
+   
+  max-width: 1200px;
+   
+  `;
 
 const Page = () => (
-    <>
+    <MarginStyle>
+        <MainStyle>
         <h1> Реквизиты и контакты</h1>
 
         <table>
@@ -106,7 +114,8 @@ const Page = () => (
             </tbody>
         </table>
 
-    </>
+        </MainStyle>
+    </MarginStyle>
 );
 
 export default Page;

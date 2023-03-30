@@ -1,17 +1,17 @@
 import React from 'react';
-import { useFormik } from 'formik';
+import {useFormik} from 'formik';
 import styled from "styled-components";
 
 const FormStyle = styled.form`
-   display: flex;
+  display: flex;
   flex-direction: column;
   text-align: left;
 `;
 const ErrorStyle = styled.div`
-   color: red;
+  color: red;
 `;
 const InputStyle = styled.input`
-  `;
+`;
 // A custom validation function. This must return an object
 // which keys are symmetrical to our values/initialValues
 const validate = values => {
@@ -54,40 +54,40 @@ const SignupForm = () => {
     });
     return (
         <>
-        <h2>Оставьте заявку или свяжитесь с нами через мессенджеры!</h2>
-        <FormStyle onSubmit={formik.handleSubmit}>
-            <label htmlFor="firstName">Имя</label>
-            <InputStyle
-                id="firstName"
-                name="firstName"
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.firstName}
-            />
-            {formik.errors.firstName ? <ErrorStyle>{formik.errors.firstName}</ErrorStyle> : null}
+            <h2>Оставьте заявку или свяжитесь с нами через мессенджеры!</h2>
+            <FormStyle onSubmit={formik.handleSubmit}>
+                <label htmlFor="firstName">Имя</label>
+                <InputStyle
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.firstName}
+                />
+                {formik.errors.firstName ? <ErrorStyle>{formik.errors.firstName}</ErrorStyle> : null}
 
-            <label htmlFor="lastName">Название организации</label>
-            <InputStyle
-                id="lastName"
-                name="lastName"
-                type="text"
-                onChange={formik.handleChange}
-                value={formik.values.lastName}
-            />
-            {formik.errors.lastName ? <ErrorStyle>{formik.errors.lastName}</ErrorStyle> : null}
+                <label htmlFor="lastName">Название организации</label>
+                <InputStyle
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    onChange={formik.handleChange}
+                    value={formik.values.lastName}
+                />
+                {formik.errors.lastName ? <ErrorStyle>{formik.errors.lastName}</ErrorStyle> : null}
 
-            <label htmlFor="email">Email адрес</label>
-            <InputStyle
-                id="email"
-                name="email"
-                type="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-            />
-            {formik.errors.email ? <ErrorStyle>{formik.errors.email}</ErrorStyle> : null}
+                <label htmlFor="email">Email адрес</label>
+                <InputStyle
+                    id="email"
+                    name="email"
+                    type="email"
+                    onChange={formik.handleChange}
+                    value={formik.values.email}
+                />
+                {formik.errors.email ? <ErrorStyle>{formik.errors.email}</ErrorStyle> : null}
 
-            <button type="submit">Отправить</button>
-        </FormStyle>
+                <button type="submit">Отправить</button>
+            </FormStyle>
         </>
     );
 };

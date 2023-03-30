@@ -8,9 +8,24 @@ const OlStyle = styled.ol`
   flex-direction: column;
 `;
 
-
+const MarginStyle = styled.div`
+  margin-right: 2em;
+  margin-left: 2em;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  `;
+const MainStyle = styled.main`
+   
+  max-width: 1200px;
+   
+  `;
 const Page = () => (
-    <>
+    <MarginStyle>
+        <MainStyle>
+
         <h1>Уважаемые коллеги и партнеры!</h1>
         <h4><b>Проектная организация ООО «Экопрофи» предлагает Вам дополнительные виды работ:</b></h4>
 
@@ -27,7 +42,9 @@ const Page = () => (
         </OlStyle>
         <br/>
 
-    </>
+        </MainStyle>
+    </MarginStyle>
+
 );
 
 export default Page;

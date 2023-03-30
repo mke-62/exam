@@ -31,6 +31,7 @@ const Logos = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 
 
   @media screen and  (max-width: 750px) {
@@ -44,6 +45,11 @@ const Logos = styled.div`
 const LogosImg = styled.img`
   width: 19em;
 `;
+
+const TextMarjin = styled.p`
+  margin-right: 2em;
+`;
+
 const BurgerStyle  = styled.div`
   overflow: hidden;
   @media screen and  (min-width: 960px){
@@ -68,6 +74,9 @@ const MenuStyleUl  = styled.div`
   margin-top: 0;
   padding-bottom: 2em;
   padding-top: 2em;
+  margin-right: 2em;
+  margin-left: 2em;
+
 `;
 
 
@@ -128,10 +137,10 @@ const Layout = ({ QQQ })=> {
 
 
                 <FadeIn
-                    from="top"
-                    positionOffset={400}
-                    triggerOffset={400}
-                    delayInMilliseconds={200}
+                    from="bottom"
+                    positionOffset={0}
+                    triggerOffset={0}
+                    delayInMilliseconds={400}
                 >
                     <div className='hedd'>
 
@@ -152,7 +161,7 @@ const Layout = ({ QQQ })=> {
 
 
                             </Logos>
-                            <p>Адрес: г. Рязань, Первомайский проспект, д. 7, оф. 15</p>
+                            <TextMarjin>  Адрес: г. Рязань, Первомайский проспект, д. 7, оф. 15 </TextMarjin>
 
                         </HeaderLine>
 

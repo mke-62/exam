@@ -1,5 +1,6 @@
 import Telephone from "../img/telephone.png";
 import styled from "styled-components";
+
 const Backgroundwhite = styled.footer`
   background: white;
   display: flex;
@@ -13,12 +14,12 @@ const Footer = styled.footer`
   background: gray;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 2em;
-  @media screen and  (max-width: 640px){
+  @media screen and  (max-width: 640px) {
     display: flex;
     flex-direction: column-reverse;
     background: white;
     gap: 1em;
-     
+
   };
 
 `;

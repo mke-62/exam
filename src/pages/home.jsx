@@ -138,8 +138,8 @@ const IndexPage = () => (
 
                 <FadeIn
                     from="bottom"
-                    positionOffset={400}
-                    triggerOffset={400}
+                    positionOffset={0}
+                    triggerOffset={0}
                     delayInMilliseconds={200}
                 >
 
@@ -156,8 +156,8 @@ const IndexPage = () => (
 
                 <FadeIn
                     from="bottom"
-                    positionOffset={400}
-                    triggerOffset={400}
+                    positionOffset={0}
+                    triggerOffset={0}
                     delayInMilliseconds={200}
                 >
                     <NavLink as={NavLink} to={"/reporting"}>
@@ -173,8 +173,8 @@ const IndexPage = () => (
 
                 <FadeIn
                     from="bottom"
-                    positionOffset={400}
-                    triggerOffset={400}
+                    positionOffset={0}
+                    triggerOffset={0}
                     delayInMilliseconds={200}
                 >
                     <NavLink as={NavLink} to={"/additionall"}>
@@ -188,8 +188,8 @@ const IndexPage = () => (
                 </FadeIn>
                 <FadeIn
                     from="bottom"
-                    positionOffset={400}
-                    triggerOffset={400}
+                    positionOffset={0}
+                    triggerOffset={0}
                     delayInMilliseconds={200}
                 >
                     <NavLink as={NavLink} to={"/training"}>
@@ -212,7 +212,7 @@ const IndexPage = () => (
                 <About>
 
                     <AboutText>
-                        <AnimationOnScroll  offset={100} animateIn='animate__zoomIn'>
+                        <AnimationOnScroll  animateOnce={true} duration={0.3} offset={100} animateIn='animate__zoomIn'>
                               <h3>О компании</h3>
                             <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
                             <p> <b>Мы осуществляем экологическое сопровождение бизнеса
@@ -233,7 +233,7 @@ const IndexPage = () => (
 
 
                     <AboutKont>
-                        <AnimationOnScroll offset={100} animateIn='animate__zoomIn'>
+                        <AnimationOnScroll animateOnce={true} duration={0.3} offset={100} animateIn='animate__zoomIn'>
 
 
                             <Form/>
@@ -245,7 +245,7 @@ const IndexPage = () => (
                 </About>
 
                 <AboutMap>
-                    <AnimationOnScroll animateIn='animate__fadeInLeftBig'>
+                    <AnimationOnScroll duration={0.7} animateIn='animate__fadeInLeftBig'>
                         <Address>
                             <p>Наш адрес:</p>
                             <p> Рязань, Первомайский проспект, д. 7, оф. 15</p>
