@@ -1,4 +1,5 @@
-// import styled from "styled-components";
+
+import '../App.css';
 
 
 import styled from "styled-components";
@@ -15,8 +16,10 @@ const MarginStyle = styled.div`
 const MainStyle = styled.main`
    
   max-width: 1200px;
-   
-  `;
+  margin: 2em;
+  `
+;
+
 
 const Page = () => (
     <MarginStyle>
@@ -35,11 +38,11 @@ const Page = () => (
             </tr>
             <tr>
                 <td>Юридический адрес</td>
-                <td>390000, г. Рязань, Первомайский проспект, д. 7, пом. Н9, оф. 15</td>
+                <td>390000, г. Рязань, Первомайский проспект, <br /> д. 7, пом. Н9, оф. 15</td>
             </tr>
             <tr>
                 <td>Почтовый адрес</td>
-                <td>390000, Первомайский проспект, д. 7, пом. Н9, оф. 15 - для ООО «Экопрофи» (с указанием трек-номера
+                <td>390000, Первомайский проспект, <br />д. 7, пом. Н9, оф. 15 - для ООО «Экопрофи» <br />(с указанием трек-номера
                     для отслеживания)
                 </td>
             </tr>

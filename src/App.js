@@ -6,11 +6,11 @@ import "animate.css/animate.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/home";
 
-import EkoSopr from "./pages/development";
-import EkoReporting from "./pages/reporting";
-import EkoAdditionall from "./pages/additionall";
-import EkoTraining from "./pages/training";
-import EkoContacts from "./pages/contacts";
+import Development from "./pages/development";
+import Reporting from "./pages/reporting";
+import Additionall from "./pages/additionall";
+import Training from "./pages/training";
+import Contacts from "./pages/contacts";
 
 
 
@@ -23,19 +23,14 @@ export default function App() {
                 <Routes>
                     <Route element={<Layout />}>
                         <Route path="/" element={<IndexPage />} />
-                        <Route path="/development" element={<EkoSopr />} />
-                        <Route path="/reporting" element={<EkoReporting />} />
-                        <Route path="/additionall" element={<EkoAdditionall />} />
-                        <Route path="/training" element={<EkoTraining />} />
-                        <Route path="/contacts" element={<EkoContacts />} />
+                        <Route path="/development" element={<Development />} />
+                        <Route path="/reporting" element={<Reporting />} />
+                        <Route path="/additionall" element={<Additionall />} />
+                        <Route path="/training" element={<Training />} />
+                        <Route path="/contacts" element={<Contacts />} />
 
 
-
-                        <Route path="/heroes">
-                            <Route index element={<EkoSopr />} />
-                            <Route path=":id" element={<EkoSopr />} />
-                            <Route path="create" element={<IndexPage />} />
-                        </Route>
+ 
                     </Route>
                 </Routes>
             </div>
