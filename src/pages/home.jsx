@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ReactEmail from '../componets/formic1';
+import ReactEmail from '../componets/formic';
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 import { FadeIn} from "react-slide-fade-in";
 
