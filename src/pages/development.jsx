@@ -7,6 +7,11 @@ const LiStyle = styled.li`
 const OlStyle = styled.ol`
   display: flex;
   flex-direction: column;
+  @media screen and  (min-width: 1170px) {
+     display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+  };
 `;
 const MarginStyle = styled.div`
   margin-right: 2em;
@@ -34,6 +39,7 @@ const Page = () => (
 
 
             <OlStyle>
+                <div>
 
                 <LiStyle>Подготовка документов и заполнение формы заявки <strong>(постановка на учет, актуализация
                     сведений об объекте, снятие с учета) </strong>&laquo;О постановке объекта, оказывающего негативное
@@ -70,9 +76,13 @@ const Page = () => (
                 <LiStyle>Проведение работ по контролю за соблюдением нормативов предельно-допустимых выбросов (ПДВ)
                     загрязняющих веществ в атмосферный воздух на стационарных источниках расчетным методом за
                     год.</LiStyle>
+                </div>
+                <div>
 
                 <LiStyle><strong> </strong>Разработка &laquo;Проекта&nbsp;&nbsp;&nbsp;&nbsp; санитарно-защитной&nbsp;&nbsp;&nbsp;&nbsp; зоны&raquo;&nbsp;&nbsp;&nbsp;&nbsp; (СЗЗ)&nbsp;&nbsp;&nbsp;&nbsp; с&nbsp;&nbsp;&nbsp;&nbsp; получением&nbsp;&nbsp;&nbsp;&nbsp; Решения&nbsp;&nbsp;&nbsp;&nbsp; об
                     установлении СЗЗ <strong>(для объектов 3-5 классов).</strong></LiStyle>
+
+
 
                 <LiStyle><strong> </strong>Разработка &laquo;Нормативов образования отходов и лимитов на их
                     размещение&raquo; (для ОНВ 1,2 категории) с получением Документа об утверждении нормативов
@@ -100,7 +110,7 @@ const Page = () => (
 
                 <LiStyle>Разработка &laquo;Инструкций по обращению с отходами 1-4 класса опасности&raquo;. </LiStyle>
 
-
+                </div>
             </OlStyle>
             <br/>
         </MainStyle>

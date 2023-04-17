@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Form from '../componets/formic';
+import ReactEmail from '../componets/formic1';
 import {AnimationOnScroll} from 'react-animation-on-scroll';
 import { FadeIn} from "react-slide-fade-in";
 
@@ -39,6 +39,11 @@ const About = styled.div`
 const AboutText = styled.div`
   margin: 2em;
   padding: 2em;
+
+`;
+
+const AboutTextUL = styled.ul`
+  text-align: left;
 
 `;
 
@@ -85,9 +90,7 @@ const Works = styled.div`
   @media screen and  (max-width: 960px){
     grid-template-columns: 1fr 1fr;
   };
-  @media screen and  (max-width: 640px){
-    grid-template-columns: 1fr;
-  };
+   
   
 `;
 
@@ -113,7 +116,7 @@ const WorkDiv = styled.div`
 
 const WorkImg = styled.img`
   max-width: 150px;
-  min-width: 80px;
+  min-width: 20px;
   padding: 2em;
   @media screen and  (max-width: 1170px) {
     max-width: 120px;
@@ -124,7 +127,22 @@ const WorkImg = styled.img`
       @media screen and  (max-width: 960px) {
         max-width: 150px;
       };
+  @media screen and  (max-width: 640px){
+    max-width: 80px;
+  };
+  @media screen and  (max-width: 500px){
+    max-width: 50px;
+  };
+  @media screen and  (max-width: 500px){
+    max-width: 30px;
+  };
+  @media screen and  (max-width: 350px){
+    max-width: 20px;
+     
+  };
 `;
+
+
 
 
 const IndexPage = () => (
@@ -134,129 +152,134 @@ const IndexPage = () => (
         </div>
         <div className='homePage'>
 
-            <Works>
 
-                <FadeIn
-                    from="bottom"
-                    positionOffset={0}
-                    triggerOffset={0}
-                    delayInMilliseconds={200}
-                >
+                <Works>
 
-                    <NavLink as={NavLink} to={"/development"}>
-                    <Work>
-                        <WorkDiv>
-                            <WorkImg src={Icon1} alt="Логотип"/>
-                        </WorkDiv>
-                        Разработка и согласование проектной документации
-                    </Work>
+                    <FadeIn
+                        from="bottom"
+                        positionOffset={0}
+                        triggerOffset={0}
+                        delayInMilliseconds={200}
+                    >
 
-                    </NavLink>
-                </FadeIn>
+                        <NavLink as={NavLink} to={"/development"}>
+                            <Work>
+                                <WorkDiv>
+                                    <WorkImg src={Icon1} alt="Логотип"/>
+                                </WorkDiv>
+                                Разработка и согласование проектной документации
+                            </Work>
 
-                <FadeIn
-                    from="bottom"
-                    positionOffset={0}
-                    triggerOffset={0}
-                    delayInMilliseconds={200}
-                >
-                    <NavLink as={NavLink} to={"/reporting"}>
+                        </NavLink>
+                    </FadeIn>
 
-                    <Work>
-                        <WorkDiv>
-                            <WorkImg src={Icon2} alt="Логотип"/>
-                        </WorkDiv>
-                        Экологическая отчетность
-                    </Work>
-                    </NavLink>
-                </FadeIn>
+                    <FadeIn
+                        from="bottom"
+                        positionOffset={0}
+                        triggerOffset={0}
+                        delayInMilliseconds={200}
+                    >
+                        <NavLink as={NavLink} to={"/reporting"}>
 
-                <FadeIn
-                    from="bottom"
-                    positionOffset={0}
-                    triggerOffset={0}
-                    delayInMilliseconds={200}
-                >
-                    <NavLink as={NavLink} to={"/additionall"}>
-                    <Work>
-                        <WorkDiv>
-                            <WorkImg src={Icon3} alt="Логотип"/>
-                        </WorkDiv>
-                        Дополнительные услуги
-                    </Work>
-                    </NavLink>
-                </FadeIn>
-                <FadeIn
-                    from="bottom"
-                    positionOffset={0}
-                    triggerOffset={0}
-                    delayInMilliseconds={200}
-                >
-                    <NavLink as={NavLink} to={"/training"}>
-                    <Work>
-                        <WorkDiv>
-                            <WorkImg src={Icon4} alt="Логотип"/>
-                        </WorkDiv>
+                            <Work>
+                                <WorkDiv>
+                                    <WorkImg src={Icon2} alt="Логотип"/>
+                                </WorkDiv>
+                                Экологическая отчетность
+                            </Work>
+                        </NavLink>
+                    </FadeIn>
 
-                        Учебный центр
-                    </Work>
-                    </NavLink>
-                </FadeIn>
+                    <FadeIn
+                        from="bottom"
+                        positionOffset={0}
+                        triggerOffset={0}
+                        delayInMilliseconds={200}
+                    >
+                        <NavLink as={NavLink} to={"/additionall"}>
+                            <Work>
+                                <WorkDiv>
+                                    <WorkImg src={Icon3} alt="Логотип"/>
+                                </WorkDiv>
+                                Дополнительные услуги
+                            </Work>
+                        </NavLink>
+                    </FadeIn>
+                    <FadeIn
+                        from="bottom"
+                        positionOffset={0}
+                        triggerOffset={0}
+                        delayInMilliseconds={200}
+                    >
+                        <NavLink as={NavLink} to={"/training"}>
+                            <Work>
+                                <WorkDiv>
+                                    <WorkImg src={Icon4} alt="Логотип"/>
+                                </WorkDiv>
 
-
-            </Works>
+                                Учебный центр
+                            </Work>
+                        </NavLink>
+                    </FadeIn>
 
 
-            <AboutBack>
+                </Works>
 
-                <About>
 
-                    <AboutText>
-                        <AnimationOnScroll  animateOnce={true} duration={0.3} offset={100} animateIn='animate__zoomIn'>
-                              <h3>О компании</h3>
-                            <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
-                            <p> <b>Мы осуществляем экологическое сопровождение бизнеса
-                                и  проводим  обучение <u>специалистов</u>   по   <u>программам Экологическая
-                                    безопасность&raquo;.</u> </b></p>
-                            <p>  <b>Наши преимущества:</b>  </p>
-                            <ul>
-                                <li> <b>быстрая и&nbsp;квалифицированная помощь&nbsp;в решении вопросов,
-                                    консультации по
-                                    вопросам экологии и экологического законодательства</b> </li>
-                                <li> <b>многолетний опыт работы в сфере экологии </b></li>
-                                <li>
-                                    <b>наличие квалифицированных и дипломированных специалистов</b>
-                                </li>
-                            </ul>
+                <AboutBack>
+
+                    <About>
+
+                        <AboutText>
+                            <AnimationOnScroll  animateOnce={true} duration={0.3} offset={100} animateIn='animate__zoomIn'>
+                                <h3>О компании</h3>
+                                <h4><b>Коллектив ООО "Экопрофи" рад приветствовать Вас на нашем сайте.</b></h4>
+                                <p> <b>Мы осуществляем экологическое сопровождение бизнеса
+                                    и  проводим  обучение <u>специалистов</u>   по   <u>программам Экологическая
+                                        безопасность&raquo;.</u> </b></p>
+                                <p>  <b>Наши преимущества:</b>  </p>
+                                <AboutTextUL>
+                                    <li> <b>быстрая и&nbsp;квалифицированная помощь&nbsp;в решении вопросов,
+                                        консультации по
+                                        вопросам экологии и экологического законодательства</b> </li>
+                                    <li> <b>многолетний опыт работы в сфере экологии </b></li>
+                                    <li>
+                                        <b>наличие квалифицированных и дипломированных специалистов</b>
+                                    </li>
+                                </AboutTextUL>
+                            </AnimationOnScroll>
+                        </AboutText>
+
+
+                        <AboutKont>
+                            <AnimationOnScroll animateOnce={true} duration={0.3} offset={100} animateIn='animate__zoomIn'>
+
+
+                                <ReactEmail/>
+                                <ContMassage/>
+                            </AnimationOnScroll>
+                        </AboutKont>
+
+
+                    </About>
+
+                    <AboutMap>
+                        <AnimationOnScroll duration={0.7} animateIn='animate__fadeInLeftBig'>
+                            <Address>
+                                <p>Наш адрес:</p>
+                                <p> Рязань, Первомайский проспект, д. 7, оф. 15</p>
+
+                            </Address>
                         </AnimationOnScroll>
-                    </AboutText>
+
+                        <YandexMap/>
+                    </AboutMap>
+
+                </AboutBack>
 
 
-                    <AboutKont>
-                        <AnimationOnScroll animateOnce={true} duration={0.3} offset={100} animateIn='animate__zoomIn'>
 
 
-                            <Form/>
-                            <ContMassage/>
-                        </AnimationOnScroll>
-                    </AboutKont>
-
-
-                </About>
-
-                <AboutMap>
-                    <AnimationOnScroll duration={0.7} animateIn='animate__fadeInLeftBig'>
-                        <Address>
-                            <p>Наш адрес:</p>
-                            <p> Рязань, Первомайский проспект, д. 7, оф. 15</p>
-
-                        </Address>
-                    </AnimationOnScroll>
-
-                    <YandexMap/>
-                </AboutMap>
-
-            </AboutBack>
 
 
 

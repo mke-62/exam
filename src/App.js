@@ -11,6 +11,7 @@ import Reporting from "./pages/reporting";
 import Additionall from "./pages/additionall";
 import Training from "./pages/training";
 import Contacts from "./pages/contacts";
+import Page404 from "./pages/page404";
 
 
 
@@ -29,8 +30,7 @@ export default function App() {
                         <Route path="/training" element={<Training />} />
                         <Route path="/contacts" element={<Contacts />} />
 
-
- 
+                        <Route path="*" element={<Page404 />} />
                     </Route>
                 </Routes>
             </div>

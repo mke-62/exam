@@ -23,8 +23,15 @@ const HeaderLine = styled.div`
   text-align: center;
   @media screen and  (max-width: 750px) {
     grid-template-columns: 1fr  1fr;
+    margin-top: 1em;
 
   };
+  @media screen and  (max-width: 530px) {
+    display: flex;
+    flex-direction: column;
+
+  };
+  
 `;
 
 const Logos = styled.div`

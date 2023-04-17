@@ -28,10 +28,10 @@ const  ShareExample = ()=> {
 
             </h3>
             <ContLogoStyle>
-                <TouchableOpacity onPress={() => Linking.openURL('https://wa.me/+79206330608')}>
+                <TouchableOpacity onPress={() => Linking.openURL('https://wa.me/+79205761557')}>
                     <Text> <ImgStyle  src={Viber} alt="вайбер"/> </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('viber://chat?number=+79209992252')}>
+                <TouchableOpacity onPress={() => Linking.openURL('viber://chat?number=+79205761557')}>
                     <Text> <ImgStyle src={Whatsapp} alt="ватсап"/> </Text>
                 </TouchableOpacity>
             </ContLogoStyle>
