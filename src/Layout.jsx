@@ -1,9 +1,7 @@
 import './App.css';
 import Footer from './componets/footer';
- import { Outlet, NavLink } from "react-router-dom";
- import { FadeIn} from "react-slide-fade-in";
-
-
+import {Outlet, NavLink} from "react-router-dom";
+import {FadeIn} from "react-slide-fade-in";
 
 
 import Burger from './componets/burger';
@@ -24,14 +22,14 @@ const HeaderLine = styled.div`
   @media screen and  (max-width: 750px) {
     grid-template-columns: 1fr  1fr;
     margin-top: 1em;
-
   };
   @media screen and  (max-width: 530px) {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    justify-content: center;
   };
-  
+
 `;
 
 const Logos = styled.div`
@@ -39,13 +37,10 @@ const Logos = styled.div`
   flex-direction: column;
   align-items: center;
   
-
-
   @media screen and  (max-width: 750px) {
     order: +1;
     grid-column-start: 1;
     grid-column-end: 3;
-
   };
 
 `;
@@ -55,26 +50,28 @@ const LogosImg = styled.img`
 
 const TextMarjin = styled.p`
   margin-right: 2em;
+  padding-left: 2em;
 `;
 
-const BurgerStyle  = styled.div`
+const BurgerStyle = styled.div`
   overflow: hidden;
-  @media screen and  (min-width: 960px){
+  @media screen and  (min-width: 960px) {
     display: none;
   };
 `;
-const MenuStyle  = styled.div`
-  background-image: url(${menuBeg}) ;
-  background-position-x: left ;
+const MenuStyle = styled.div`
+  background-image: url(${menuBeg});
+  background-position-x: left;
   background-position-y: bottom;
   background-size: 86px;
   background-repeat-x: repeat;
   background-repeat-y: no-repeat;
-  @media screen and  (max-width: 960px){
+  @media screen and  (max-width: 960px) {
     display: none;
   };
 `;
-const MenuStyleUl  = styled.div`
+
+const MenuStyleUl = styled.div`
   display: flex;
   justify-content: space-evenly;
   list-style: none;
@@ -86,8 +83,7 @@ const MenuStyleUl  = styled.div`
 
 `;
 
-
-const Layout = ({ QQQ })=> {
+const Layout = ({QQQ}) => {
 
     const menus = [
         {
@@ -142,7 +138,6 @@ const Layout = ({ QQQ })=> {
 
                 </MenuStyle>
 
-
                 <FadeIn
                     from="bottom"
                     positionOffset={0}
@@ -152,36 +147,24 @@ const Layout = ({ QQQ })=> {
                     <div className='hedd'>
 
                         <HeaderLine>
-
                             <a className='telLink' href="tel:+79605761557">
                                 <img className='telIcon' src={Telephone} alt="номер телефона"/>
                                 <p> +7(960) 57-615-57</p>
-
-
                             </a>
                             <Logos>
                                 <h5>Экологическое сопровождение вашего бизнеса
-
                                 </h5>
-
                                 <LogosImg src={Logo} alt="Логотип"/>
 
-
                             </Logos>
-                            <TextMarjin>  Адрес: г. Рязань, Первомайский проспект, д. 7, оф. 15 </TextMarjin>
+                            <TextMarjin> Адрес: г. Рязань, Первомайский проспект, д. 7, оф. 15 </TextMarjin>
 
                         </HeaderLine>
 
-
                     </div>
-                    </FadeIn>
-
-                <Outlet />
-
-                <Footer />
-
-
-
+                </FadeIn>
+                <Outlet/>
+                <Footer/>
             </div>
         </>
 

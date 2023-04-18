@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-const YandexMapStyle = styled.div`
-  @media screen and  (max-width: 640px){
-    display: none;
 
+const YandexMapStyle = styled.div`
+  @media screen and  (max-width: 640px) {
+    display: none;
   };
 `;
 
@@ -15,6 +15,5 @@ const IndexPage = () => (
     </YandexMapStyle>
 
 );
-
 
 export default IndexPage

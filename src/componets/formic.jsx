@@ -1,8 +1,7 @@
-import {useFormik } from 'formik';
+import {useFormik} from 'formik';
 import styled from "styled-components";
 import emailjs from '@emailjs/browser';
-import React, { useState } from 'react';
-
+import React, {useState} from 'react';
 
 
 const FormStyle = styled.form`
@@ -42,7 +41,6 @@ const validate = values => {
 
 const SignupForm = () => {
     const [buttonState, setButtonState] = useState('');
-
     const formik = useFormik({
         initialValues: {
             firstName: '',
@@ -50,22 +48,19 @@ const SignupForm = () => {
             email: '',
         },
         validate,
-        onSubmit: (object, { resetForm },setStatus ) => {
-            emailjs.send(process.env.REACT_APP_Service, process.env.REACT_APP_TemplateId, object,process.env.REACT_APP_PublicKey )
+        onSubmit: (object, {resetForm}, setStatus) => {
+            emailjs.send(process.env.REACT_APP_Service, process.env.REACT_APP_TemplateId, object, process.env.REACT_APP_PublicKey)
 
                 .then((result) => {
                     console.log(result.text)
                     setButtonState('Сообщение отправлено')
                     resetForm();
-                    setTimeout (() => {
+                    setTimeout(() => {
                         setButtonState('')
                     }, 3000);
 
-                 }, (error) => {
-
+                }, (error) => {
                     console.log(error.text)
-                    console.log(process.env.REACT_APP_Service)
-
                     setButtonState('Ошибка, сервис временно не доступен')
                     resetForm();
                 })

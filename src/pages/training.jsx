@@ -12,16 +12,13 @@ const OlStyle = styled.ol`
 const MarginStyle = styled.div`
   margin-right: 2em;
   margin-left: 2em;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 const MainStyle = styled.main`
-
   max-width: 1200px;
-
 `;
 
 

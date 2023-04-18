@@ -19,7 +19,6 @@ const Footer = styled.footer`
     flex-direction: column-reverse;
     background: white;
     gap: 1em;
-
   };
 
 `;
@@ -33,10 +32,7 @@ const Footers = () => (
                 ООО "Экопрофи"
             </Backgroundwhite>
             <Backgroundwhite>
-
                 <a href="mailto:info@ekoprofi62.ru">info@ekoprofi62.ru</a>
-
-
             </Backgroundwhite>
 
             <Backgroundwhite>
@@ -44,7 +40,6 @@ const Footers = () => (
                     <img className='telIcon' src={Telephone} alt="номер телефона"/>
                     <p> +7(960) 57-615-57</p></a>
             </Backgroundwhite>
-
 
         </Footer>
         <hr/>

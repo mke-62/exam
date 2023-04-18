@@ -15,9 +15,8 @@ const OlStyle = styled.ol`
 `;
 
 
-
 class ParentComponent extends React.Component {
-    constructor (props) {
+    constructor(props) {
         super(props)
         this.state = {
             menuOpen: false
@@ -25,21 +24,21 @@ class ParentComponent extends React.Component {
     }
 
 
-    handleStateChange (state) {
+    handleStateChange(state) {
         this.setState({menuOpen: state.isOpen})
     }
 
 
-    closeMenu () {
+    closeMenu() {
         this.setState({menuOpen: false})
     }
 
 
-    toggleMenu () {
+    toggleMenu() {
         this.setState(state => ({menuOpen: !state.menuOpen}))
     }
 
-    render () {
+    render() {
         return (
             <div>
                 <Menu
@@ -62,6 +61,7 @@ class ParentComponent extends React.Component {
         )
     }
 }
+
 export default ParentComponent;
 
 

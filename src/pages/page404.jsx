@@ -1,8 +1,7 @@
 import styled from "styled-components";
+
 const MainStyle = styled.h3`
-
   margin-bottom: 10em;
-
 `;
 
 const Page = () => (

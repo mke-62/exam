@@ -17,15 +17,11 @@ const ContLogoStyle = styled.div`
    gap: 2em;
 `;
 
-
-
-
 const  ShareExample = ()=> {
     return(
         <>
             <h3>
                 Мы на связи прямо сейчас!
-
             </h3>
             <ContLogoStyle>
                 <TouchableOpacity onPress={() => Linking.openURL('https://wa.me/+79205761557')}>
@@ -37,8 +33,6 @@ const  ShareExample = ()=> {
             </ContLogoStyle>
         </>
 
-
     );
-
 };
 export default ShareExample;
