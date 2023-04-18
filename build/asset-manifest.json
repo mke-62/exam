@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6d47ac5.css",
-    "main.js": "/static/js/main.cd05ccdb.js",
+    "main.css": "/static/css/main.69fd5d9a.css",
+    "main.js": "/static/js/main.f36674d2.js",
     "static/js/787.b5aa3df0.chunk.js": "/static/js/787.b5aa3df0.chunk.js",
     "static/media/background.jpg": "/static/media/background.f79203859de5a24a3e06.jpg",
     "static/media/background2.jpg": "/static/media/background2.efb95b91c6bba85b1ffe.jpg",
+    "static/media/viber.png": "/static/media/viber.3cf69828aa7628521b37.png",
+    "static/media/whatsapp.png": "/static/media/whatsapp.127b736bb19669ffd85e.png",
     "static/media/logo.png": "/static/media/logo.ac3d0e297d6445c4dbba.png",
     "static/media/icon1.png": "/static/media/icon1.940f042b6b61bb18a6d2.png",
     "static/media/telephone.png": "/static/media/telephone.fa8f04088f9268eae42c.png",
@@ -12,12 +14,12 @@
     "static/media/icon3.png": "/static/media/icon3.f6dc3cd937b5be4eb2af.png",
     "static/media/icon2.png": "/static/media/icon2.fa3809775971f5b0c3c9.png",
     "index.html": "/index.html",
-    "main.c6d47ac5.css.map": "/static/css/main.c6d47ac5.css.map",
-    "main.cd05ccdb.js.map": "/static/js/main.cd05ccdb.js.map",
+    "main.69fd5d9a.css.map": "/static/css/main.69fd5d9a.css.map",
+    "main.f36674d2.js.map": "/static/js/main.f36674d2.js.map",
     "787.b5aa3df0.chunk.js.map": "/static/js/787.b5aa3df0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6d47ac5.css",
-    "static/js/main.cd05ccdb.js"
+    "static/css/main.69fd5d9a.css",
+    "static/js/main.f36674d2.js"
   ]
 }
