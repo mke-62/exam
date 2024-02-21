@@ -24,10 +24,10 @@ const  ShareExample = ()=> {
                 Мы на связи прямо сейчас!
             </h3>
             <ContLogoStyle>
-                <TouchableOpacity onPress={() => Linking.openURL('https://wa.me/+79205761557')}>
+                <TouchableOpacity onPress={() => Linking.openURL('https://wa.me/+79605761557')}>
                     <Text> <ImgStyle  src={Viber} alt="вайбер"/> </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => Linking.openURL('viber://chat?number=+79205761557')}>
+                <TouchableOpacity onPress={() => Linking.openURL('viber://chat?number=+79605761557')}>
                     <Text> <ImgStyle src={Whatsapp} alt="ватсап"/> </Text>
                 </TouchableOpacity>
             </ContLogoStyle>
